@@ -3,7 +3,7 @@ import path from 'path';
 import getDirectories from './utils/getDirectories.js';
 import utils from './config.js';
 
-let variableRegex = /[a-zA-Z-_\d]{0,256}snare[a-zA-Z-_\d]{0,256}/g;
+let testRegex = /[a-zA-Z-_\d]{0,256}(hat|hihat|HH)[a-zA-Z-_\d]{0,256}/gi;
 
 fs.mkdir(path.join('./', 'samples'), e => {
   if (e) return console.error(e);
